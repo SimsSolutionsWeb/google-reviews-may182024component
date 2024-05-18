@@ -6,69 +6,19 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface GoogleReviewComponent {
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
 }
 declare global {
-    interface HTMLGoogleReviewComponentElement extends Components.GoogleReviewComponent, HTMLStencilElement {
-    }
-    var HTMLGoogleReviewComponentElement: {
-        prototype: HTMLGoogleReviewComponentElement;
-        new (): HTMLGoogleReviewComponentElement;
-    };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLElementTagNameMap {
-        "google-review-component": HTMLGoogleReviewComponentElement;
-        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface GoogleReviewComponent {
-    }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface IntrinsicElements {
-        "google-review-component": GoogleReviewComponent;
-        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "google-review-component": LocalJSX.GoogleReviewComponent & JSXBase.HTMLAttributes<HTMLGoogleReviewComponentElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }
